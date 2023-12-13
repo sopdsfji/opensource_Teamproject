@@ -33,12 +33,10 @@ for i in range(len(train_dataset)):
     plt.imshow(x_train[i].reshape((26, 34)), cmap='gray')
 
     plt.show()
-
 #matpltlib로 데이터 제대로 불러왔는지 확인(라벨링 확인)
 #눈을 뜸- 1 , 눈을 감음 -0
 
 PATH = 'weights/trained.pth'
-
 train_dataloader = DataLoader(train_dataset, batch_size=32, shuffle=True, num_workers=0)
 
 model = Net()
@@ -48,7 +46,6 @@ criterion = nn.BCEWithLogitsLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.0001)
 
 epochs = 50
-
 #trained parameter를 저장할 path 를 설정
 #train, val data loader 를 작성
 
@@ -81,6 +78,22 @@ for epoch in range(epochs):
 
 print("learning finish")
 torch.save(model.state_dict(), PATH)
+#train 전 moodel.train()으로 학습 모드를 선언해주기
+#index 0 은 이미지이고 1은 라벨 --> 이를 받을 때 to('cuda')로 받아야 gpu 사용 가능
+#transpose를 통해 형상 변화시킨 후 model에 넣기
+
+
+
+def accuracy(y_pred, y_test):
+    y_pred_tag = torch.round(torch.sigmoid(y_pred))
+
+    correct_results_sum = (y_pred_tag == y_test).sum().float()
+    acc = correct_results_sum / y_test.shape[0]
+    acc = torch.round(acc * 100)
+
+    return acc
+#accuracy 함수
+#sigmoid로 확률화 시키기, round로 0또는 1로 변환시키기 -0.5이하는 0, 초과는 1
 
 
 
