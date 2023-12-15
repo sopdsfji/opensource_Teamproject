@@ -39,5 +39,4 @@ out1.write(result): 동영상 녹화.
 ___
 <h2>5. 참고 자료</h2>
 *누르면 이동합니다*
-
-<a href="https://moon-coco.tistory.com/entry/OpenCV%EC%B0%A8%EC%84%A0-%EC%9D%B8%EC%8B%9D)https://moon-coco.tistory.com/entry/OpenCV%EC%B0%A8%EC%84%A0-%EC%9D%B8%EC%8B%9D"> <h3>: 참고 티스토리 링크 </h3> </a>
+https://moon-coco.tistory.com/entry/OpenCV%EC%B0%A8%EC%84%A0-%EC%9D%B8%EC%8B%9D)https://moon-coco.tistory.com/entry/OpenCV%EC%B0%A8%EC%84%A0-%EC%9D%B8%EC%8B%9D
