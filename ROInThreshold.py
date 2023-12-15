@@ -17,3 +17,6 @@ def roi(image):
     masked_image = cv2.bitwise_and(image, mask)
 
     return masked_image
+
+_gray = cv2.cvtColor(w_f_r_img, cv2.COLOR_BGR2GRAY)
+ret, thresh = cv2.threshold(_gray, 160, 255, cv2.THRESH_BINARY)
