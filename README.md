@@ -5,17 +5,17 @@
 >> dlib를 사용하여 눈으로 판단되는 좌표 값을 얻어내고 (opencv+dlib) 해당 눈의 상태를 파악하는 순서로 구성했다. 눈이 감겼는지 판단하는 classification 부분은 간단한 cnn을 사용했다.
 
 <사용한 패키지, version>
-Language: python 3.6.8
-CUDA: 10.2
+>>Language: python 3.6.8
+>>CUDA: 10.2
 
-Library
-pytorch: 1.5.0
-torchvision: 0.6.0
-numpy: 1.18.5
-opencv-python: 4.2.0.34
-dlib: 19.20.0
-matplotlib: 3.2.1
-imutils: 0.5.3
+>>Library
+>>pytorch: 1.5.0
+>>torchvision: 0.6.0
+>>numpy: 1.18.5
+>>opencv-python: 4.2.0.34
+>>dlib: 19.20.0
+>>matplotlib: 3.2.1
+>>imutils: 0.5.3
 
 <실행 방법>
 https://github.com/sopdsfji/opensource_Teamproject/blob/main/img.jpg)https://github.com/sopdsfji/opensource_Teamproject/blob/main/img.jpg
