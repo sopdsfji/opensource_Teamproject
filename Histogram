@@ -1,0 +1,7 @@
+def plothistogram(image):
+    histogram = np.sum(image[image.shape[0]//2:, :], axis=0)
+    midpoint = np.int(histogram.shape[0]/2)
+    leftbase = np.argmax(histogram[:midpoint])
+    rightbase = np.argmax(histogram[midpoint:]) + midpoint
+    
+    return leftbase, rightbase
